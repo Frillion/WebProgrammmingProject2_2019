@@ -60,4 +60,4 @@ def page(pgnumber):
         return render_template('head.html', cnt=pg3contents)
 
 if (__name__) == '__main__':
-    app.run(host='0.0.0.0',debug=True, port=argv[1])
+    app.run(debug=True)
