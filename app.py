@@ -47,7 +47,7 @@ pg3contents = {
 
 @app.route("/")
 def index():
-    return render_template('head.html', cnt=contents)
+    return render_template('Main.html', cnt=contents)
 
 
 @app.route("/pages/<int:pgnumber>", methods=['Get'])
@@ -55,9 +55,9 @@ def page(pgnumber):
     if pgnumber == 1:
         return redirect("/")
     elif pgnumber == 2:
-        return render_template('head.html', cnt=pg2contents)
+        return render_template('Main.html', cnt=pg2contents)
     elif pgnumber == 3:
-        return render_template('head.html', cnt=pg3contents)
+        return render_template('Main.html', cnt=pg3contents)
 
 if (__name__) == '__main__':
     app.run(debug=True)
